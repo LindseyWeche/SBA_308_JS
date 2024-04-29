@@ -38,53 +38,57 @@ const AssignmentGroup = {
  
 
 const newPoints = AssignmentGroup.assignments.map((point) => point.points_possible)
- const TotalnewPoints = newPoints.reduce((acc, curr) => acc + curr)
- console.log ("The Total of Points for these four modules is :",TotalnewPoints)
+// console.log(newPoints);
+const finalPoints = newPoints.splice (3,1)
+// Using .splice to remove the last item by indexing because it's not due yet
+// console.log(finalPoints);
+const TotalnewPoints = newPoints.reduce((acc, curr) => acc + curr)
+  console.log ("The Total of Points for these four modules is :",TotalnewPoints)
 //  Apply map method to have a new array for all the points_possible in newPoints and reduce to have a single number (the sum)
 
-  // The provided learner submission data.
-// const LearnerSubmissions = [
-//     {
-//       learner_id: 125,
-//       assignment_id: 1,
-//       submission: {
-//         submitted_at: "2023-01-25",
-//         score: 47
-//       }
-//     },
-//     {
-//       learner_id: 125,
-//       assignment_id: 2,
-//       submission: {
-//         submitted_at: "2023-02-12",
-//         score: 150
-//       }
-//     },
-//     {
-//       learner_id: 125,
-//       assignment_id: 3,
-//       submission: {
-//         submitted_at: "2023-01-25",
-//         score: 400
-//       }
-//     },
-//     {
-//       learner_id: 132,
-//       assignment_id: 1,
-//       submission: {
-//         submitted_at: "2023-01-24",
-//         score: 39
-//       }
-//     },
-//     {
-//       learner_id: 132,
-//       assignment_id: 2,
-//       submission: {
-//         submitted_at: "2023-03-07",
-//         score: 140
-//       }
-//     }
-//   ];
+//   The provided learner submission data.
+const LearnerSubmissions = [
+    {
+      learner_id: 125,
+      assignment_id: 1,
+      submission: {
+        submitted_at: "2023-01-25",
+        score: 47
+      }
+    },
+    {
+      learner_id: 125,
+      assignment_id: 2,
+      submission: {
+        submitted_at: "2023-03-12",
+        score: 150
+      }
+    },
+    {
+      learner_id: 125,
+      assignment_id: 3,
+      submission: {
+        submitted_at: "2023-04-25",
+        score: 400
+      }
+    },
+    {
+      learner_id: 132,
+      assignment_id: 1,
+      submission: {
+        submitted_at: "2023-01-24",
+        score: 39
+      }
+    },
+    {
+      learner_id: 132,
+      assignment_id: 2,
+      submission: {
+        submitted_at: "2023-03-07",
+        score: 140
+      }
+    }
+  ];
   
 //   function getLearnerData(course, ag, submissions) {
 //     // here, we would process this data to achieve the desired result.
