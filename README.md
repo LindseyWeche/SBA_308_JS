@@ -1,4 +1,4 @@
-# SBA_308_JS
+
 # SBA_308_JS
 <h1>This is my JavaScript Project </h1>
 This is a Project where I have to manipulate different kinds of data :
