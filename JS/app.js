@@ -89,7 +89,34 @@ const LearnerSubmissions = [
       }
     }
   ];
-  
+
+
+
+// const score125 = LearnerSubmissions[2]
+// if (LearnerSubmissions.learner_id===125);{
+// return sum +score125
+// for (let i=0; i<LearnerSubmissions.length; i++);
+// console.log(score125[i]);
+// }
+
+// }
+// LearnerSubmissions.forEach(function(submission){
+//     let x = submission.score ++;
+//     console.log(x);
+// });
+
+const score125 = LearnerSubmissions.map((submission) => submission.score)
+console.log(score125)
+
+// Trying to access the score on this array of object to calculate the score for each student
+
+const remove =  LearnerSubmissions.slice(3);LearnerSubmissions.slice(4)
+console.log(remove)
+
+
+
+
+
 //   function getLearnerData(course, ag, submissions) {
 //     // here, we would process this data to achieve the desired result.
 //     const result = [
