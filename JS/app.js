@@ -84,7 +84,7 @@ const LearnerSubmissions = [
       learner_id: 132,
       assignment_id: 2,
       submission: {
-        submitted_at: "2023-03-07",
+        submitted_at: "2023-04-07",
         score: 140
       }
     }
@@ -106,39 +106,56 @@ const LearnerSubmissions = [
 // });
 
 const score125 = LearnerSubmissions.map((submission) => submission.score)
-console.log(score125)
+// console.log(score125)
 
 // Trying to access the score on this array of object to calculate the score for each student
+const avg125 = score125 / TotalnewPoints
+   if (AssignmentGroup.assignments.due_at <= LearnerSubmissions.submission.submitted_at && LearnerSubmissions.learner_id===125) {
+        return avg125 ;
+  else {
+       return score125;
+   }
+    }
+
 
 const remove =  LearnerSubmissions.slice(3);LearnerSubmissions.slice(4)
 console.log(remove)
+// Now I have the data of the Learner 2
+let sum = 0;
+const score132 = LearnerSubmissions.submission.reduce((sum,submission));
+console.log (sum + submission.submission.score)
+// The main problem I'm comfronting is I can't access score 
 
 
 
 
 
-//   function getLearnerData(course, ag, submissions) {
-//     // here, we would process this data to achieve the desired result.
-//     const result = [
-//       {
-//         id: 125,
-//         avg: 0.985, // (47 + 150) / (50 + 150)
-//         1: 0.94, // 47 / 50
-//         2: 1.0 // 150 / 150
-//       },
-//       {
-//         id: 132,
-//         avg: 0.82, // (39 + 125) / (50 + 150)
-//         1: 0.78, // 39 / 50
-//         2: 0.833 // late: (140 - 15) / 150
-//       }
-//     ];
+
+
+
+
+  function getLearnerData(course, ag, submissions) {
+    // here, we would process this data to achieve the desired result.
+    const result = [
+      {
+        id: 125,
+        avg: 0.985, // (47 + 150) / (50 + 150)
+        1: 0.94, // 47 / 50
+        2: 1.0 // 150 / 150
+      },
+      {
+        id: 132,
+        avg: 0.82, // (39 + 125) / (50 + 150)
+        1: 0.78, // 39 / 50
+        2: 0.833 // late: (140 - 15) / 150
+      }
+    ];
   
-//     return result;
-//   }
+    return result;
+  }
   
-//   const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
+  const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
   
-//   console.log(result);
+  console.log(result);
   
   
